@@ -1,0 +1,49 @@
+Requerimientos
+-El programa debera recibir un rango en string y un arreglo de valores; y retornar
+si los valores del arreglo estan contenidos en el rango con el metodo "contains".
+-El programa debera recibir un rango en string y retornar un arreglo con los valores
+contenidos en el rango con el metodo "getAllPoints"
+-El programa debera recibir dos rangos en string; y retornar si el segundo esta dentro del otro.
+- El programa debe identificar el punto inicial y final del range dependendiendo de la condición. Si '[]' incluye
+los valores de los extremos. Si '()' no incluye dichos valores.
+-El programa debe identificar si hay solapamiento con otro rango, es decir, si ambos
+rangos comparten algun elementos en comun entoces se solapan.
+-El programa debera recibir dos rangos en string y retornar si ambos rangos son
+iguales (mismos puntos de incio y fin) con el metodo "equals".
+
+Criterios de acpetacion
+- El string input debe repestar la nomclatura "[2,5)"
+- El output debe repestar salida de datos del metodo.
+- El programa debe poder identificar correctamente cuando dos rangos estan solapados.
+- El programa debe poder encontrar los puntos iniciales y finales dependiendo de las condiciones de entradas.
+- El programa podrá comparar rangos en plan de identificar si uno está dentro del otro.
+- Tener la capacidad de encontrar rangos iguales.
+
+Casos de Pruebas
+    getAllPoints
+        - Entrada "[3,6)" salida {3,4,5}
+        - Entrada "[2,5]" salida {2,3,4,5}
+        - Entrada "(2,5)" salida {3,4}
+        - Entrada "(3,6]" salida {4,5,6}
+    ContainsRange
+        - Entrada "[2,5)","(5,8)" salida: false
+        - Entrada: "[3,8]","[1,2]" salida: false
+        - Entrada: "(3,7)", "[4,5]" salida: true
+        - Entrada: "(-4,9]", "(5,8)" salida: true
+
+    endPoints
+        - entrada: "[2,5)" salida: {2,4}
+        - entrada: "[-3,4]" salida: {-3, 4}
+        - entrada: "(7, 9]" salida: {8,9}
+        - Entrada: "(4, 11)" Salida: {5,10}
+
+    overlaps
+         - Entrada: "[4,8]" y "(8, 15]" Salida: false
+         - Entrada: "(3,5]" y "[4,9]" Salida: true
+         - Entrada: "[2,5)" y "(6,10)" Salida: false
+         - Entrada: "[2,5)" y "[4,10)" Salida: true
+    equals
+         -Entrada: "[4,8)" y "[4,8)" Salida: true
+         -Entrada: "[5,10]" y "[2,4]" Salida: false
+         -Entrada: "(2,9)" y "[3,8]" Salida: true
+         -Entrada: "[3,4)" y "(3,4]" Salida: false
